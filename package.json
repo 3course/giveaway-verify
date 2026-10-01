@@ -1,0 +1,15 @@
+{
+  "name": "giveaway-verify",
+  "version": "1.0.0",
+  "description": "Independent verifier and public log anchors for Giveaway Draw certificates (gd-v1 / canon-v1).",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "giveaway-verify": "./verify.mjs" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node test.mjs"
+  },
+  "optionalDependencies": {
+    "@noble/curves": "^2.4.0"
+  }
+}
