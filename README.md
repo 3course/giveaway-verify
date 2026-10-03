@@ -83,7 +83,7 @@ node test.mjs     # golden vectors for gd-v1 / canon-v1
 
 ## The anchor Action
 
-`.github/workflows/anchor.yml` runs hourly. It fetches `/api/chain/head`, checks the new head
+`.github/workflows/anchor.yml` runs hourly (paused until launch: manual runs only for now). It fetches `/api/chain/head`, checks the new head
 extends the last anchored head (re-linking every entry in between), then appends the head's JSON
 line to `anchors/YYYY/MM/DD.jsonl` and updates `anchors/latest.json`.
 

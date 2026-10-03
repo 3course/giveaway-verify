@@ -1,11 +1,14 @@
 name: Anchor log head
 
-# Hourly: fetch the Giveaway Draw commitment-log head and commit it to anchors/.
+# Fetch the Giveaway Draw commitment-log head and commit it to anchors/.
 # GitHub's history is the independent witness. An unreachable API is skipped quietly;
 # a rewritten history fails the run and is recorded in anchors/ALERTS.jsonl.
+#
+# PAUSED until launch: the hourly schedule is off so no pre-launch (scratch) log can be anchored.
+# Manual runs still work (Actions -> Anchor log head -> Run workflow). On launch day, restore:
+#   schedule:
+#     - cron: "17 * * * *"
 on:
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
